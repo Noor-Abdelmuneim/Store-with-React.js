@@ -1,11 +1,11 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import './App.css';
-import HomePage from './Pages/HomePage';
-import ProductsPage from './Pages/ProductsPage';
-import NavBar from './Components/NavBar';
-import { ProductsProvider } from './Store/Index';
-import ProductsDetails from './Components/ProductsDetails';
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css";
+import HomePage from "./Pages/HomePage";
+import ProductsPage from "./Pages/ProductsPage";
+import NavBar from "./Components/NavBar";
+import { ProductsProvider } from "./Store/Index";
+import ProductsDetails from "./Components/ProductsDetails";
+import LoginPage from "./Pages/LoginPage";
 
 function App() {
   return (
@@ -16,11 +16,11 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/Products" element={<ProductsPage />} />
+            <Route path="/Login" element={<LoginPage />} />
             <Route path="/Products/:id" element={<ProductsDetails />} />
           </Routes>
         </BrowserRouter>
       </ProductsProvider>
-
     </div>
   );
 }
